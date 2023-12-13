@@ -38,7 +38,7 @@
  
 ## About The Project
 
-This is a simple IDE project based on C# and using different components. In this project, I have used some C# libraries such as [CliWrap](https://github.com/Tyrrrz/CliWrap), [ScintillaNET](https://github.com/jacobslusser/ScintillaNET)
+WinFormsApp IDE is a powerful Integrated Development Environment designed specifically for STM32 microcontroller development. Built using C# and incorporating ScintillaNET for advanced text editing features, this IDE offers an intuitive and efficient platform for coding, debugging, and managing STM32 projects. Key features include serial port management, automatic device detection, syntax highlighting, and easy project navigation.
 
 <div align="center">
   <a>
@@ -46,35 +46,51 @@ This is a simple IDE project based on C# and using different components. In this
   </a>
 </div> 
 
-<!-- 
+
 Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
+* **Optimized for STM32:** Unlike generic IDEs, WinFormsApp IDE is tailored specifically for STM32 development, offering features and functionalities that align with the needs of STM32 programmers.
+* **Advanced Serial Port Management:** Thanks to System.IO.Ports, our IDE offers sophisticated tools for managing serial communications, crucial for microcontroller programming and data transfer.
+* **Real-Time Device Management:** Utilizing System.Management, the IDE provides real-time monitoring and management of connected STM32 devices, enhancing the development workflow.
+* **Customized User Experience:** Built with user experience in mind, the IDE boasts a customizable interface, syntax highlighting, and other features that make coding more intuitive and less prone to errors.
+* **Streamlined Workflow:** With integrated tools for editing, compiling, and debugging, developers can manage their entire STM32 project lifecycle within a single environment.
+* **Community and Open Source Spirit:** Being open-source, it’s continuously evolving with contributions from a community passionate about STM32 development.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
--->
 
+### Key Features
+
+* **Customized STM32 Development Environment:** Tailored specifically for STM32 projects, offering specialized tools and features for these microcontrollers such as Directory Tree.
+![Tree View Feature in WinFormsApp IDE](gifs/Animation.gif)
+      
+
+* **Real-Time Serial Port Management:** Efficient communication with STM32 devices, including automatic detection and management of serial connections.
+![Tree View Feature in WinFormsApp IDE](gifs/Animation_board.gif)
+
+
+* **Advanced Code Editor Building the program:** Integrating ScintillaNET for an enhanced coding experience with features like syntax highlighting, code folding, and auto-completion specifically tuned for C#. and control over connected STM32 devices, enhancing the development and debugging process.
+![Tree View Feature in WinFormsApp IDE](gifs/Animation_build.gif)
+
+* **Integrated Programming Tools:** Streamlined tools for building and debugging STM32 applications directly within the IDE, simplifying the development workflow.
+![Tree View Feature in WinFormsApp IDE](gifs/Animation_load.gif)
 
 ### Built With
-<!-- 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+ In this project, I have used some C# libraries. These libraries can be added by using Nuget Package installer.
 
+* **C#** - Programming language
+* **.NET 6.0** - Framework
+* **[CliWrap](https://github.com/Tyrrrz/CliWrap)**- Library for running command-line processes
+* **[ScintillaNET](https://github.com/jacobslusser/ScintillaNET)** - Text editor component
+* **[System.Management](https://www.nuget.org/packages/System.Management/)**  - Namespace for handling events
+* **[System.IO.Ports](https://www.nuget.org/packages/System.IO.Ports/)** - Namespace for managing serial ports
+
+Moreover, it is necessary to use some softwares for building and loading C embedded code. 
+
+* **[OpenOCD](https://openocd.org/)** - On-chip programmer
+* **[ST-Link CLI](https://www.st.com/en/development-tools/stsw-link004.html)** - Software interface for programming STM32 microcontrollers.
+  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
--->
+
 
 
 <!-- GETTING STARTED -->
@@ -84,66 +100,60 @@ This is an example of how you may give instructions on setting up your project l
 To get a local copy up and running follow these simple example steps.
 -->
 ### Prerequisites
-<!-- 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
--->
-### Installation
-<!-- 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+* Windows Operating System
+* .NET 6.0 or later
+* Required libraries: ScintillaNET, CliWrap, etc.
+* ST-LINK drivers for STM32 microcontroller programming
+
+### Installation
+
+1. Clone the repository: ``` git clone https://github.com/AlirezaBeigiMech/STM32_IDE/ ```
+2. Navigate to the cloned directory.
+3. Open the solution file in Visual Studio.
+4. Restore NuGet packages and build the solution.
+5. Run the application from Visual Studio or build an executable.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
--->
+
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
--->
+* **Creating a New Project:** Click on 'New Project' and select the project type suitable for STM32 development.
+* **Opening Existing Projects:** Use the 'Open Project' option to load existing projects into the IDE.
+* **Editing Code:** The ScintillaNET editor provides syntax highlighting and other text editing features.
+* **Compiling and Debugging:** Integrated tools for compiling and debugging STM32 code.
+* **Serial Port Management:** Automatically detect and manage serial ports for connected STM32 devices.
 
 
 <!-- ROADMAP -->
 ## Roadmap
-<!-- 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
+- [x] Add directory tree for adding the file in code editor
+- [x] Add code editor 
+- [x] Add multi-device Management port
+- [x] Add saving feature to save the change in *.c files
+- [x] Add Multi-tab feature 
+- [x] Add Textbox to monitor the application
+- [x] Add connection to CLI to perform command
+- [x] Add responsive page 
+- [x] Add load feature to program the microcontroller
+- [ ] Add new file handling
+- [ ] Add new directory tree
+- [ ] Add auto-complete feature
+- [ ] Modify tab features
+    - [ ] Remove star if change is remove
+    - [ ] Add close button
+    - [ ] Add autoscale Maximize and minimize
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
--->
+
 
 
 <!-- CONTRIBUTING -->
 ## Contributing
-<!-- 
+
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
@@ -156,76 +166,25 @@ Don't forget to give the project a star! Thanks again!
 5. Open a Pull Request
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
--->
 
 
 <!-- LICENSE -->
 ## License
-<!-- 
+ 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
--->
+
 
 
 <!-- CONTACT -->
 ## Contact
-<!--
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Your Name - alirezabeigimech@gmail.com, alireza_beigi@sfu.ca
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
--->
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-<!--
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+Project Link: [AlirezaBeigiMech/STM32_IDE](https://github.com/AlirezaBeigiMech/STM32_IDE)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
--->
