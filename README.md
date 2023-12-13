@@ -140,6 +140,7 @@ To get a local copy up and running follow these simple example steps.
 - [x] Add responsive page 
 - [x] Add load feature to program the microcontroller
 - [ ] Add new file handling
+- [ ] Add shortcut handling
 - [ ] Add new directory tree
 - [ ] Add auto-complete feature
 - [ ] Modify tab features
